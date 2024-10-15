@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daftar Buku</title>
+</head>
+<body>
+
+<h1>Daftar Buku</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th >Id</th>
+            <th>Judul</th>
+            <th>Penulis</th>
+            <th>Tahun</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="buku: ${bukuList}">
+            <td th:text="${buku.getId()}"></td>
+            <td th:text="${buku.getJudul()}"></td>
+            <td th:text="${buku.getPenulis()}"></td>
+            <td th:text="${buku.getTahunTerbit()}"></td>
+
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
